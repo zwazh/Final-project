@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>SBA Disaster Loan in FY 2014</title>
+	</head>
+
+	<body>
+		<h1>Disaster loan of {{state_code}}</h1>
+		<h1>Total amount is {{approved_loan}}</h1>
+
+<ul>{% for city in cities|sort(attribute="city_name") %}
+  <li>{{city.city_name}}: {{city.amount}}</li>
+{% endfor %}
+</ul>
+
+
+	</body>
+
+</html>
