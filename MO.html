@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<title>
+Disaster loan of MO
+</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+
+<div id="container" style="width:100%; height:400px;"></div>
+<script> 
+$(function () { 
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Disater loan of MO'
+        },
+        subtitle: {
+            text: 'Source: sba.gov'
+        },
+        xAxis: {
+            categories: ['Devils Elbow', 'Dixon', 'Eldon', 'Hollister', 'Jerome', 'Lake Ozark', 'Laquey', 'Newburg', 'Rolla', 'Saint Robert', 'Waynesville'],
+            title: {text: null}, crosshair: true
+        },
+        yAxis: {
+        	min:0, 
+            title: {
+                text: 'Amount($)', align: 'high'},
+            labels: {
+                overflow: 'justify'
+            }
+            
+        },
+
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+      
+        series: [{name: 'Devils Elbow',data: [0]}, {name: 'Dixon', data: [0]}, {name: 'Eldon', data: [0]}, {name: 'Hollister', data: [35100]}, {name: 'Jerome', data: [14000]}, {name: 'Lake Ozark', data: [14000]}, {name: 'Laquey', data: [0]}, {name: 'Newburg', data: [0]}, {name: 'Rolla', data: [0]}, {name: 'Saint Robert', data: [0]}, {name: 'Waynesville', data: [198200]}]
+    });
+});
+</script>
+</body>
+</html>
